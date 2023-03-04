@@ -10,9 +10,7 @@ public class Task2 {
     public static void main(String[] args) {
 
         LinkedList<String> array = new LinkedList<>(Arrays.asList("Иван", "Константин", "Матвей", "Константин", "Вера", "Матвей", "Матвей"));
-        
         Map<String, Integer> newarray = new HashMap<>();
-
         sort(array, newarray);
 
     }
@@ -24,9 +22,7 @@ public class Task2 {
         }
 
         List<Map.Entry<String, Integer>> list = new ArrayList<>(newarray.entrySet());
-
         Collections.sort(list, Map.Entry.comparingByValue(Comparator.reverseOrder()));
-
         System.out.println(list);
     }
 }
